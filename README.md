@@ -6,5 +6,4 @@
 -progress circle的js以根據文字描述調整進度條\
 -新增社群網站連結\
 -將原本是review的carousel換成相片\
--從flaticon更換圖示\
--右上角"發現更多"會連到先前的作業
+-從flaticon更換圖示

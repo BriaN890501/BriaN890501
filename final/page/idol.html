@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>分類</title>
+
+    <style>
+        body
+        {
+            background-image: url("../image/background.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #back
+        {
+            margin:auto;
+            font-size: 50px;
+            text-align: center;
+        }
+        #title
+        {
+            margin: 20px;
+            font-size: 60px;
+            text-align: center;
+        }
+        .grid-container
+        {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        .grid-item 
+        {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 100px;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            background-size: 100%;
+            grid-column-start: 1; 
+            grid-column-end: 4; 
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        <p>偶像</p>
+    </div>
+    
+    <div class="grid-container">
+            <div class="grid-item"><a href="365.html">這題很難喔</a></div>
+            <div class="grid-item"><a href="COOKIE.html">吃餅乾</a></div>
+            <div class="grid-item"><a href="SEASON.html">適合迎新的"季節"</a></div>  
+            <div class="grid-item"><a href="MANNEQUIN.html">在做這個之前我還真不知道mannequin是啥</a></div> 
+          </div>
+
+    <div id="back">
+        <a  href="../index.html" target="_self">返回</a>
+    </div>
+</body>
+</html>

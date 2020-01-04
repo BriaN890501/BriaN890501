@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>前端程式設計期末報告</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        body
+        {
+            background-image: url("image/background.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #banner
+        {
+            background-color: red;
+            border: 5px solid black;
+            border-radius: 25px;
+            padding: 50px;
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            font-size: 60px;
+
+        }
+        .grid-container
+        {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        .grid-item 
+        {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 130px;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: right;
+            background-size: 100%;
+        }
+        #VOCALOID
+        {
+            text-align: left;
+        }
+        #brian
+        {
+            color: white;
+        }
+        #roselia
+        {
+            top: -100px;
+            position: relative;
+        }
+        #roselia:visited
+        {
+            color: white;
+        }
+        #hamu
+        {
+            top: -60px;
+            position: relative;
+        }
+        #hamu:visited
+        {
+            color: black;
+        }
+        #vocal
+        {
+            left: -100px;
+            position: relative;
+        }
+        #vocal:visited
+        {
+            color: black;
+        }
+        #anime
+        {
+            color: white;
+            right: -110px;
+            position: relative;
+        }
+        #anime:visited
+        {
+            color: white;
+        }
+        #jpop
+        {
+            color: white;
+            top: -110px;
+            right: 50px;
+            position: relative;
+        }
+        #jpop:visited
+        {
+            color: white;
+        }
+        #idol
+        {
+            color: white;
+            top: 100px;
+            position: relative;
+        }
+        #idol:visited
+        {
+            color: white;
+        }
+        #movie:visited
+        {
+            color: black;
+        }
+        #drama:visited
+        {
+            color: black;
+        }
+        #idol2d:visited
+        {
+            color: black;
+        }
+        h1
+        {
+            color: white;
+        }
+        p
+        {
+            color: white;
+        }
+        #score
+        {
+            padding-left: 20%;
+        }
+        #win
+        {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <b>日文歌唱大賽 <img src="image/torii.png" height="70px"></b>
+    </div>
+
+
+
+    <div id="score">
+
+        <h1>計分表</h1>
+        <p>冠軍有獎喔喔喔</p>
+        <button
+                    onclick="TeamScores.hideteam3()"
+                    type="button" class="btn btn-primary">變兩隊
+        </button>
+        <button
+            onclick="TeamScores.hideteam4()"
+            type="button" class="btn btn-primary">變三隊
+        </button>
+        <p id="t1">
+            一號隊
+            <button
+                    onclick="TeamScores.team1Plus()"
+                    type="button" class="btn btn-primary">+1分
+            </button>
+            <button
+                    onclick="TeamScores.team1Minus()"
+                    type="button" class="btn btn-primary">-1分
+            </button>
+            Current: <span id="team1-score">0</span>
+        </p>
+        <p id="t2">
+            二號隊
+            <button
+                    onclick="TeamScores.team2Plus()"
+                    type="button" class="btn btn-primary">+1分
+            </button>
+            <button
+            onclick="TeamScores.team2Minus()"
+            type="button" class="btn btn-primary">-1分
+            </button>
+            Current: <span id="team2-score">0</span>
+        </p>
+        <p id="t3">
+          三號隊
+          <button
+                  onclick="TeamScores.team3Plus()"
+                  type="button" class="btn btn-primary">+1分
+          </button>
+          <button
+          onclick="TeamScores.team3Minus()"
+          type="button" class="btn btn-primary">-1分
+          </button>
+          Current: <span id="team3-score">0</span>
+      </p>
+      <p id="t4">
+        四號隊
+        <button
+                onclick="TeamScores.team4Plus()"
+                type="button" class="btn btn-primary">+1分
+        </button>
+        <button
+        onclick="TeamScores.team4Minus()"
+        type="button" class="btn btn-primary">-1分
+        </button>
+        Current: <span id="team4-score">0</span>
+    </p>
+    <button
+      onclick="TeamScores.winner()"
+      type="button" class="btn btn-primary" id="win">勝者是...
+    </button>
+        
+</div>    
+
+
+
+
+    <div class="grid-container">
+        <div class="grid-item" style="background-image:url(image/idol.jpg)"><a href="page/idol.html" id="idol" target="_blank">偶像</a></div>
+        <div class="grid-item" id="VOCALOID" style="background-image:url(image/MikuCover.jpg)" ><a href="page/vocaloid.html" id="vocal"target="_blank">VOCALOID</a></div>
+        <div class="grid-item" style="background-image:url(image/anime.jpg)"><a href="page/anime.html" id="anime"target="_blank">動畫</a></div>  
+        <div class="grid-item" style="background-image:url(image/JPOP.jpg)"><a href="page/jpop.html" id="jpop"target="_blank">JPOP</a></div>
+        <div class="grid-item" id="brian" style="background-image:url(image/roselia.jpg)"><a href="page/brian.html" id="roselia"target="_blank">出題者的個人喜好</a></div>
+        <div class="grid-item" style="background-image:url(image/hamu.jpg)"><a href="page/hamu.html"id="hamu"target="_blank">洗腦毒歌</a></div>  
+        <div class="grid-item" style="background-image:url(image/weather.jpg)"><a href="page/animemovie.html" id="movie"target="_blank">動畫電影</a></div>
+        <div class="grid-item" style="background-image:url(image/drama.jpg)"><a href="page/drama.html" id="drama"target="_blank"> 日劇/電影</a></div>
+        <div class="grid-item" style="background-image:url(image/lovelive.jpg)"><a href="page/otaku.html" id="idol2d"target="_blank">二次元偶像</a></div>  
+      </div>
+    <div style="text-align: center">
+        <h1>台大日文歌曲社 社課每周二五 18:30~21:30 二活602 社辦@二活914</h1>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.js"
+        integrity="sha256-awnyktR66d3+Hym/H0vYBQ1GkO06rFGkzKQcBj7npVE=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script>
+  "use strict";
+  var TeamScores = TeamScores || {};
+
+  (function ($) {
+    $(document).ready(function () {
+      var team1 = 0;
+      var team2 = 0;
+      var team3 = 0;
+      var team4 = 0;
+      TeamScores.team1Plus = function () {
+        team1++;
+        $("#team1-score").html(team1);
+      };
+      TeamScores.team1Minus = function () {
+        team1--;
+        $("#team1-score").html(team1);
+      };
+      TeamScores.team2Plus = function () {
+        team2++;
+        $("#team2-score").html(team2);
+      };
+      TeamScores.team2Minus = function () {
+        team2--;
+        $("#team2-score").html(team2);
+      };
+      TeamScores.team3Plus = function () {
+        team3++;
+        $("#team3-score").html(team3);
+      };
+      TeamScores.team3Minus = function () {
+        team3--;
+        $("#team3-score").html(team3);
+      };
+      TeamScores.team4Plus = function () {
+        team4++;
+        $("#team4-score").html(team4);
+      };
+      TeamScores.team4Minus = function () {
+        team4--;
+        $("#team4-score").html(team4);
+      };
+      TeamScores.hideteam3 = function(){
+        $("#t3").hide(1000);
+      }
+      TeamScores.hideteam4 = function(){
+        $("#t4").hide(1000);
+      }
+      TeamScores.winner = function(){
+        var maxscore = Math.max(team1, team2, team3, team4)
+        if(maxscore == team1)
+        {
+          $("#win").append("一號隊");
+        }
+        else if(maxscore == team2)
+        {
+          $("#win").append("二號隊");
+        }
+        else if(maxscore == team3)
+        {
+          $("#win").append("三號隊");
+        }
+        else if(maxscore == team4)
+        {
+          $("#win").append("四號隊");
+        }
+      }
+      
+    });
+  }(jQuery));
+</script>
+</body>
+</html>

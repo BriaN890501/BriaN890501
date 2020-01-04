@@ -14,4 +14,4 @@
 用css grid排版分類的九宮格\
 jquery做分數表加扣分、結算、隱藏三四隊伍\
 ktv影片from nintendo joysound\
-用premiere剪了一堆影片\
+用premiere剪了一堆影片

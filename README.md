@@ -15,3 +15,6 @@
 jquery做分數表加扣分、結算、隱藏三四隊伍\
 ktv影片from nintendo joysound\
 用premiere剪了一堆影片
+\
+備註:\
+因為github上傳有限制25mb大小，故有五首歌影片檔案過大無法播放
